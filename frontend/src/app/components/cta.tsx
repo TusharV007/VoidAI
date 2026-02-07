@@ -19,20 +19,24 @@ export function CTA() {
           We're building the future of no-code machine learning. Join the waitlist to be notified when we launch.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            size="lg"
-            className="bg-black text-white hover:bg-neutral-800 px-8 py-6 text-lg group"
-          >
-            Join Waitlist
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg"
-          >
-            Get Updates
-          </Button>
+          <a href="/register">
+            <Button
+              size="lg"
+              className="bg-black text-white hover:bg-neutral-800 px-8 py-6 text-lg group"
+            >
+              Join Waitlist
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
+          <a href="/register">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg"
+            >
+              Get Updates
+            </Button>
+          </a>
         </div>
         <p className="mt-8 text-sm text-neutral-500">
           Be among the first to experience the platform • Early access available

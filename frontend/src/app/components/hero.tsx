@@ -53,13 +53,15 @@ export function Hero() {
           transition={{ delay: 0.5 }}
           className="flex justify-center items-center"
         >
-          <Button
-            size="lg"
-            className="bg-black text-white hover:bg-neutral-800 px-8 py-6 text-lg group"
-          >
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <a href="/register">
+            <Button
+              size="lg"
+              className="bg-black text-white hover:bg-neutral-800 px-8 py-6 text-lg group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
         </motion.div>
       </motion.div>
     </section>
