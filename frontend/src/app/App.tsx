@@ -5,8 +5,9 @@ import { Landing } from "./pages/Landing";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Dashboard } from "./pages/Dashboard";
+import { Projects } from "./pages/Projects";
 
-// Redirect to dashboard if already authenticated
+// Redirect to projects if already authenticated
 function AuthRedirect({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
 
@@ -22,7 +23,7 @@ function AuthRedirect({ children }: { children: React.ReactNode }) {
   }
 
   if (user) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/projects" replace />;
   }
 
   return <>{children}</>;
@@ -36,7 +37,7 @@ export default function App() {
           {/* Public Routes */}
           <Route path="/" element={<Landing />} />
 
-          {/* Auth Routes (redirect to dashboard if authenticated) */}
+          {/* Auth Routes (redirect to projects if authenticated) */}
           <Route
             path="/login"
             element={
@@ -56,7 +57,15 @@ export default function App() {
 
           {/* Protected Routes */}
           <Route
-            path="/dashboard"
+            path="/projects"
+            element={
+              <ProtectedRoute>
+                <Projects />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/projects/:projectId"
             element={
               <ProtectedRoute>
                 <Dashboard />
